@@ -1,0 +1,432 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* popup ---------------------------------------------------------*/
+
+.popup {
+    width: 1200px;
+    height: 580px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 100;
+}
+
+.popup .folder {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px -4px;
+    border-radius: 10px;
+}
+
+/* folder left ---------------------------------------------------------*/
+
+.popup .folder .fdleft {
+    width: 20%;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 10px 0 0 10px ;
+}
+
+/* logo */
+
+.popup .folder .fdleft .logo {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    background: url(../images/logo.png) no-repeat 5% 50%/20%;
+}
+.popup .folder .fdleft .logo h1 {
+    line-height: 230%;
+    font-size: 1.5rem;
+    margin-left: 15%;
+}
+
+/* list */
+
+.popup .folder .fdleft .list {
+    width: 100%;
+    height: 85%;
+    padding-top: 15%;
+}
+.popup .folder .fdleft .list .menu {
+    width: 100%;
+    height: 85%;
+}
+.popup .folder .fdleft .list h4 {
+    padding-left: 10%;
+    font-size: 1rem;
+}
+.popup .folder .fdleft .list .menu > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    margin-top: 8%;
+    cursor: pointer;
+    font-size: 1rem;  
+}
+.popup .folder .fdleft .list .menu > li > a.active {
+    background-color: #bababa;
+    color: #000;
+}
+.popup .folder .fdleft .list .menu > li > .sub {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    margin-top: 5%;
+    font-size: 0.8rem;
+}
+
+.popup .folder .fdleft .list .menu > li > .about {
+    background: url(../images/document_3530.png) no-repeat 10% 55%/10%;
+}
+
+.popup .folder .fdleft .list .menu > li > .videofd {
+    background: url(../images/videoplayminimono_105851.png) no-repeat 10% 50%/10%;
+}
+
+.popup .folder .fdleft .list .menu > li > .coding {
+    background: url(../images/web_development_coding_code_browse_browser_icon-icons.com_59980.png) no-repeat 10% 50%/10%;
+}
+
+
+.popup .folder .fdleft .list .menu > li > a > img {
+    width: 10%;
+    vertical-align: auto;
+}
+
+
+/* folder right ---------------------------------------------------------*/
+
+.popup .folder .fdright {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 20%;
+    background-color: #1D1D1D;
+    border-radius: 0 10px 10px 0;
+}
+
+/* top */
+
+.popup .folder .fdright .top {
+    width: 100%;
+    height: 8%;
+    position: relative;
+}
+.popup .folder .fdright .top .pointbox {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 20%;
+    left: 3%;   
+}
+.popup .folder .fdright .top .pointbox .video {
+    width: 18px;
+    height: 21px;
+}
+.popup .folder .fdright .top .pointbox .righticon {
+    width: 23px;
+    height: 21px;
+}
+.popup .folder .fdright .top .pointbox > p:nth-child(3) {
+    height: 20px;
+    font-size: 0.8rem;
+    color: #5E605D;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+.popup .folder .fdright .top .pointbox > p:nth-child(5) {
+    height: 20px;
+    font-size: 0.8rem;
+    color: #5E605D;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* imgvideo top */
+
+.popup .folder #imgvideo .top .pointbox > p:nth-child(5) {
+    width: 64px;
+    height: 20px;
+    font-size: 0.8rem;
+    color: #5E605D;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+.popup .folder .fdright .top .close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../images/x_5982.png) no-repeat center/cover;
+    top: 20%;
+    right: 1%;
+}
+
+/* main */
+
+.popup .folder .fdright .main {
+    width: 100%;
+    height: 84%;
+}
+
+/* videofd main */
+
+.popup .folder #videofd .main {
+    width: 100%;
+    height: 84%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup .folder #videofd .main .box {
+    width: 35%;
+    height: 70%;
+    background-color: #fff;
+    margin: 0 5%;
+}
+
+.popup .folder #videofd .main .box > img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+.popup .folder #videofd .main .box > h3 {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-left: 15%;
+    margin-top: 7.5%;
+}
+
+.popup .folder #videofd .main > .video button {
+    height: 26px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 25.5%;
+    left: 30%;
+}
+.popup .folder #videofd .main > .images button {
+    height: 26px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 25.5%;
+    left: 76%;
+}
+
+/* coding main */
+
+.popup .folder #coding .main {
+    width: 100%;
+    height: 92%;
+    position: relative;
+}
+
+/* tabitembox */
+
+.popup .folder #coding .main .tabitembox {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+}
+
+.popup .folder #coding .main .tabitembox .tabitem {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    display: flex;
+}
+.popup .folder #coding .main .tabitembox .tabitem .siteimg {
+    width: 100%;
+    height: 200px;
+    margin: 12px;
+    background-color: #fff;
+}
+.popup .folder #coding .main .tabitembox .tabitem .bg1 {
+    background: url(../images/randysdonuts.png) no-repeat center/cover;
+}
+.popup .folder #coding .main .tabitembox .tabitem .content {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    margin-left: 15px;
+}
+.popup .folder #coding .main .tabitembox .tabitem .content > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;  
+}
+.popup .folder #coding .main .tabitembox .tabitem .content > p {
+    width: 100%;
+    height: 60%;
+    font-size: 1rem;
+}
+.popup .folder #coding .main .tabitembox .tabitem .content > a {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+.popup .folder #coding .main .tabitembox .tabitem .content > a:nth-child(4){
+    margin-left: 25px;
+}
+
+/* tabmenu */
+
+.popup .folder #coding .main .clonecodinglist {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;  
+}
+.popup .folder #coding .main .clonecodinglist .tab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li {
+    width: 23%;
+    height: 90%;
+    margin-top: 6px;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a.active {
+    color: #fff;
+    background-color: #777;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a > p {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 2.5%;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a .codingbox {
+    width: 90%;
+    height: 70%;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0.1px black;
+    position: absolute;
+    left: 5%;
+    top: 10%;   
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a .codingboxtop {
+    width: 70%;
+    height: 70%;
+    background-color: #ccc;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 2px 0.1px black;
+    position: absolute;
+    left: 15%;
+    top: 5%;
+}
+.popup .folder #coding .main .clonecodinglist .tab > li > a > .box1 {
+    background: url(../images/randysdonuts.png) no-repeat center/cover;
+}
+/* bottom */
+
+.popup .folder .fdright .bottom {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.popup .folder .fdright .bottom > img {
+    width: 3%;
+    height: 55%;
+    margin-right: 10px;
+}
+
+/* main video imgvideo videoslide --------------------------------------------- */
+
+.popup .folder #video .main .videoslide {
+    width: 100%;
+    height: 100%;
+}
+.popup .folder #video .main .videoslide .swiper-wrapper {
+    width: 90%;
+    height: 80%;
+    padding-top: 5%;
+}
+.popup .folder #video .main .videoslide .swiper-wrapper .swiper-slide {
+    width: 40%;
+    height: 80%;
+}
+
+.popup .folder #video .main .videoslide .swiper-wrapper .swiper-slide > img {
+    width: 100%;
+    height: 100%;
+}
+.popup .folder #video .main .videoslide .swiper-wrapper .swiper-slide > p {
+    text-align: center;
+}
+
+/* main video video imgslide ------------------------------------------------ */
+
+.popup .folder #imgvideo .main .imgslide {
+    width: 45%;
+    height: 90%;
+    padding-top: 5%;
+}
+.popup .folder #imgvideo .main .imgslide .swiper-wrapper .swiper-slide {
+    background-color: beige;
+}
+
+.popup .folder #imgvideo .main .imgslide .swiper-wrapper .swiper-slide > img {
+    width: 320px;
+    height: 230px;
+}
+
+.popup .folder #imgvideo .main .imgslide .swiper-wrapper .swiper-slide > p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 10%;
+}
+
+
